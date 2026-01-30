@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HTML Course | LearnHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="lux-header">
+  <h1>LearnHub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="certificate.html">Certificate</a>
+  </nav>
+</header>
+<section class="lux-container">
+
+  <h2 class="section-title">📘 React.js Basics</h2>
+
+  <div class="lux-card topic">
+    <h3>1️⃣ Introduction to React</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">What is React?</a></li>
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">Why use React?</a></li>
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">React vs JavaScript</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>2️⃣ React Setup & Basics</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">Create React App</a></li>
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">Project structure</a></li>
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">JSX basics</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>3️⃣ Components</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">Functional components</a></li>
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">Class components</a></li>
+      <li><a href="https://youtu.be/Ke90Tje7VS0" target="_blank">Component reusability</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>4️⃣ Props & State</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/35lXWvCuM8o" target="_blank">Props</a></li>
+      <li><a href="https://youtu.be/35lXWvCuM8o" target="_blank">State</a></li>
+      <li><a href="https://youtu.be/35lXWvCuM8o" target="_blank">State vs Props</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>5️⃣ Event Handling</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/0XSDAup85SA" target="_blank">Handling events</a></li>
+      <li><a href="https://youtu.be/0XSDAup85SA" target="_blank">onClick & onChange</a></li>
+      <li><a href="https://youtu.be/0XSDAup85SA" target="_blank">Passing arguments</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>6️⃣ Hooks</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/f687hBjwFcM" target="_blank">useState</a></li>
+      <li><a href="https://youtu.be/f687hBjwFcM" target="_blank">useEffect</a></li>
+      <li><a href="https://youtu.be/f687hBjwFcM" target="_blank">Custom hooks</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>7️⃣ Conditional Rendering</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/7o5FPaVA9m0" target="_blank">if / else rendering</a></li>
+      <li><a href="https://youtu.be/7o5FPaVA9m0" target="_blank">Ternary operator</a></li>
+      <li><a href="https://youtu.be/7o5FPaVA9m0" target="_blank">Logical && operator</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>8️⃣ Lists & Keys</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/0sasRxl35_8" target="_blank">Rendering lists</a></li>
+      <li><a href="https://youtu.be/0sasRxl35_8" target="_blank">Keys in React</a></li>
+      <li><a href="https://youtu.be/0sasRxl35_8" target="_blank">Map function</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>9️⃣ API & Data Fetching</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/T3Px88x_PsA" target="_blank">Fetch API</a></li>
+      <li><a href="https://youtu.be/T3Px88x_PsA" target="_blank">Axios</a></li>
+      <li><a href="https://youtu.be/T3Px88x_PsA" target="_blank">Handling JSON data</a></li>
+    </ul>
+  </div>
+
+  <div class="lux-card topic">
+    <h3>🔟 React Best Practices</h3>
+    <ul class="subtopics">
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">Clean component structure</a></li>
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">Folder organization</a></li>
+      <li><a href="https://youtu.be/bMknfKXIFA8" target="_blank">Performance optimization</a></li>
+    </ul>
+  </div>
+
+</section>
+
+<script>
+ const topics = document.querySelectorAll("[data-topic]");
+ let completedTopics = 0;
+ function completeTopic(btn) {
+ const card = btn.parentElement; 
+if (card.classList.contains("completed")) return;
+ card.classList.add("completed");
+ card.classList.remove("locked");
+ card.querySelector(".check").style.display = "inline";
+ btn.innerText = "Completed ✔"; 
+btn.disabled = true;
+ completedTopics++;
+ // Unlock next topic
+ const next = card.nextElementSibling; 
+if (next && next.classList.contains("locked")) { 
+next.classList.remove("locked"); 
+}
+ updateProgress();
+ } 
+function updateProgress(){
+ const percent = Math.round((completedTopics / topics.length) * 100); progress = percent;
+ document.getElementById("progressValue").innerText = percent + "%";
+ document.getElementById("progressText").innerText = "Course Progress: " + percent + "%";
+ if (percent >= 70 && quizPassed) {
+ unlockCertificate();
+ }
+ }
+ </script>
+ </body>
+ </html>
